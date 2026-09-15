@@ -1,0 +1,30 @@
+# Power BI
+# The pbip project folder is committed. These are the local-only parts.
+.pbi/
+**/.pbi/
+*.pbix
+*.pbit
+
+# Data
+# Everything under data/ is local except the committed sample.
+/data/*
+!/data/sample/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local and environment
+.env
+*.log
+logs/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Internal, deliberately not published
+project-log/LESSONS.md
