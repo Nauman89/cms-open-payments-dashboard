@@ -12,18 +12,16 @@
   ],
   "background": "#FCFCFB",
   "secondaryBackground": "#F9F9F7",
-  "foreground": "#0B0B0B",
-  "secondaryForeground": "#52514E",
-  "foregroundNeutralSecondary": "#52514E",
-  "foregroundNeutralTertiary": "#898781",
+  "firstLevelElements": "#0B0B0B",
+  "secondLevelElements": "#52514E",
+  "thirdLevelElements": "#E1E0D9",
+  "fourthLevelElements": "#898781",
   "tableAccent": "#2A78D6",
   "good": "#0CA30C",
   "neutral": "#898781",
   "bad": "#D03B3B",
   "minimum": "#CDE2FB",
   "maximum": "#0D366B",
-  "hyperlink": "#2A78D6",
-  "visitedHyperlink": "#4A3AA7",
   "textClasses": {
     "callout": {
       "fontFace": "Segoe UI Semibold",
@@ -61,30 +59,17 @@
             "show": false
           }
         ],
-        "dropShadow": [
-          {
-            "show": false
-          }
-        ],
         "title": [
           {
             "show": true,
-            "fontColor": { "solid": { "color": "#0B0B0B" } },
-            "background": { "solid": { "color": "#FCFCFB" } },
-            "alignment": "left",
-            "fontSize": 13,
-            "fontFamily": "Segoe UI Semibold"
+            "alignment": "left"
           }
         ],
         "categoryAxis": [
           {
             "show": true,
             "showAxisTitle": false,
-            "gridlineShow": false,
-            "labelColor": { "solid": { "color": "#52514E" } },
-            "fontSize": 10,
-            "fontFamily": "Segoe UI",
-            "lineColor": { "solid": { "color": "#C3C2B7" } }
+            "gridlineShow": false
           }
         ],
         "valueAxis": [
@@ -93,30 +78,19 @@
             "showAxisTitle": false,
             "gridlineShow": true,
             "gridlineColor": { "solid": { "color": "#E1E0D9" } },
-            "gridlineThickness": 1,
-            "gridlineStyle": "solid",
-            "labelColor": { "solid": { "color": "#52514E" } },
-            "fontSize": 10,
-            "fontFamily": "Segoe UI",
-            "lineColor": { "solid": { "color": "#C3C2B7" } }
+            "gridlineThickness": 1
           }
         ],
         "legend": [
           {
             "show": true,
             "position": "Top",
-            "showTitle": false,
-            "labelColor": { "solid": { "color": "#52514E" } },
-            "fontSize": 10,
-            "fontFamily": "Segoe UI"
+            "showTitle": false
           }
         ],
         "labels": [
           {
-            "show": false,
-            "color": { "solid": { "color": "#0B0B0B" } },
-            "fontSize": 10,
-            "fontFamily": "Segoe UI"
+            "show": false
           }
         ]
       }
@@ -132,17 +106,6 @@
         "outspace": [
           {
             "color": { "solid": { "color": "#F9F9F7" } },
-            "transparency": 0
-          }
-        ]
-      }
-    },
-    "group": {
-      "*": {
-        "background": [
-          {
-            "show": true,
-            "color": { "solid": { "color": "#FCFCFB" } },
             "transparency": 0
           }
         ]

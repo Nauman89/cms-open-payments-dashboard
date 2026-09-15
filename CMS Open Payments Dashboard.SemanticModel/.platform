@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CMS Open Payments Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4d0cb545-e429-4675-b611-9b10811f4ff8"
+  }
+}
