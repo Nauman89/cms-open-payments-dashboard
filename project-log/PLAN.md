@@ -207,7 +207,7 @@ Two estimates are recorded. Nauman's is the planning figure. Claude's is kept as
 
 | Stage | Nauman | Claude | Planned finish | Actual | Slip reason |
 |---|---|---|---|---|---|
-| 0 Planning and design | 2 | 2 | Tue 15 Sep | | |
+| 0 Planning and design | 2 | 2 | Tue 15 Sep | Tue 15 Sep | on time |
 | 1 Acquisition | 3 | 4 | Fri 18 Sep | | |
 | 2 Source assessment | 2 | 4 | Tue 22 Sep | | |
 | 3 Power Query transformation | 3 | 5 | Fri 25 Sep | | |

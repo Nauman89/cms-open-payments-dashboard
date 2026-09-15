@@ -6,31 +6,36 @@ Current state only. Overwritten at every update. No history.
 
 ## Active stage
 
-Stage 0, planning and design. Planned finish Tue 15 Sep.
+Stage 0 complete, on time against the planned Tue 15 Sep. Stage 1, acquisition, has not started. Planned finish Fri 18 Sep.
 
-## Done
+## Stage 0 exit criteria, all met
 
-- Intake complete. Brief, deliverable, scope, acceptance criteria, stage list, exit criteria, stopping rules and milestones all settled.
-- PLAN.md written and signed off.
-- Source evaluated: CMS Open Payments, terms checked, no licensing obstacle.
-- Acquisition approach decided: metastore API resolves the download URL, bulk zip per program year, scripted, no pre-download filtering.
-- Repo skeleton created.
+- Bucket A decisions recorded, bucket B items each carry named evidence and an owning stage.
+- Stage list, exit criteria, stopping rules, provisional acceptance criteria and milestones agreed.
+- PLAN.md signed off.
+- Repo created and pushed to github.com/Nauman89/cms-open-payments-dashboard, branch main. Two commits: 740b529 skeleton, 2afe01f pbip and theme.
+- pbip saved with TMDL confirmed. `definition/database.tmdl`, `model.tmdl` and `cultures/en-US.tmdl` present. No `.pbi` cache files tracked.
+- Theme imported and applied.
+- uv project initialised, pyproject.toml committed. No dependencies yet.
 
-## Files that exist and what they hold
+Outstanding from stage 0: the DECISIONS entries in `decisions/01-planning.md` are headings only. Nauman writes them.
 
-- `project-log/PLAN.md` - the signed off plan. Brief, deliverable, scope, acceptance criteria, nine stages with exit criteria, milestones, stopping rules, environment.
-- `project-log/BACKLOG.md` - empty, with its tagging convention.
+## What exists and what it holds
+
+- `project-log/PLAN.md` - the signed off plan. Brief, deliverable, scope, acceptance criteria, nine stages with exit criteria, milestones with both estimates, stopping rules, environment.
+- `project-log/BACKLOG.md` - two open items.
 - `project-log/LESSONS.md` - gitignored. Process lessons from stage 0.
-- `project-log/decisions/01-planning.md` - decision headings from the intake conversation, entries to be written by Nauman.
+- `project-log/decisions/01-planning.md` - thirteen decision headings, entries to be written.
 - `project-log/handoffs/stage-1-acquisition.md` - opening message for the stage 1 chat.
-- `theme/open-payments-theme.json` - the theme stub. Palette, typography and defaults only.
-- `notes/cms-open-payments-source-reference.md` - API endpoints, file naming, record counts, field notes.
-- `.gitignore`, `LICENSE`.
+- `theme/open-payments-theme.json` - theme source of truth. A second copy lives inside the report at `StaticResources/RegisteredResources/`, written there on import. Edits to the source must be re-imported.
+- `notes/cms-open-payments-source-reference.md` - APIs, file naming, counts, field traps.
+- `notes/powerbi-theme-json.md` - theme JSON schema and the property name traps.
+- `CMS Open Payments Dashboard.pbip` plus its `.Report` and `.SemanticModel` folders. Empty report, empty model.
 
 ## Immediate next action
 
-Finish stage 0: create the pbip in Power BI Desktop with TMDL enabled, run git init, first commit, create the GitHub repo and push. Then open the stage 1 chat from the handoff.
+Open the stage 1 chat using `project-log/handoffs/stage-1-acquisition.md` as the opening message. First work: the acquisition script.
 
 ## Blockers
 
-Claude's shell cannot reach the local filesystem. A Windows update released 8 September 2026 broke the mount. Files reach the repo through the file bridge instead, and all git commands are run by Nauman.
+None. Claude's shell still cannot reach the local filesystem, a Windows update from 8 September 2026 broke the mount, so Claude writes files through the file bridge and Nauman runs every command. The folder connection also drops intermittently and has to be re-granted.
