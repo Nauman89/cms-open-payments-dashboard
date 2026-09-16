@@ -1,0 +1,9 @@
+# Normalise all text to LF in the repository.
+# Power BI Desktop writes CRLF in the working tree; this keeps the diffs clean.
+* text=auto
+
+# Binary, never diffed or line ending converted.
+*.pbix binary
+*.pbit binary
+*.zip binary
+*.parquet binary
