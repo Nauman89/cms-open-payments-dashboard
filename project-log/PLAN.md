@@ -205,24 +205,36 @@ Business days. Dates assume a Monday to Friday week beginning Monday 14 Septembe
 
 Two estimates are recorded. Nauman's is the planning figure. Claude's is kept as a second reading so that after two or three projects the direction and size of the estimating bias becomes visible.
 
-| Stage | Nauman | Claude | Planned finish | Actual | Slip reason |
-|---|---|---|---|---|---|
-| 0 Planning and design | 2 | 2 | Tue 15 Sep | Tue 15 Sep | on time |
-| 1 Acquisition | 3 | 4 | Fri 18 Sep | | |
-| 2 Source assessment | 2 | 4 | Tue 22 Sep | | |
-| 3 Power Query transformation | 3 | 5 | Fri 25 Sep | | |
-| 4 Data model design | 2 | 3 | Tue 29 Sep | | |
-| 5 DAX measures | 2 | 3 | Thu 1 Oct | | |
-| 6 Report design | 2 | 3 | Mon 5 Oct | | |
-| 7 Validation | 2 | 2 | Wed 7 Oct | | |
-| 8 Handover | 2 | 3 | Fri 9 Oct | | |
-| **Total** | **20** | **29** | | | |
+| Stage | Nauman | Claude | Planned finish | Actual finish | Days worked | Slip reason |
+|---|---|---|---|---|---|---|
+| 0 Planning and design | 2 | 2 | Tue 15 Sep | Tue 15 Sep | 2 | on time |
+| 1 Acquisition | 3 | 4 | Fri 18 Sep | | | |
+| 2 Source assessment | 2 | 4 | Tue 22 Sep | | | |
+| 3 Power Query transformation | 3 | 5 | Fri 25 Sep | | | |
+| 4 Data model design | 2 | 3 | Tue 29 Sep | | | |
+| 5 DAX measures | 2 | 3 | Thu 1 Oct | | | |
+| 6 Report design | 2 | 3 | Mon 5 Oct | | | |
+| 7 Validation | 2 | 2 | Wed 7 Oct | | | |
+| 8 Handover | 2 | 3 | Fri 9 Oct | | | |
+| **Total** | **20** | **29** | | | | |
 
 Claude's estimate would put delivery at Thursday 22 October.
 
-**Rules on dates.** A planned date is frozen when set and never rewritten. A stage runs as long as it needs, and the overrun is recorded as a slip against the original figure.
+**Rules on dates.** A planned date is frozen when set and never rewritten. A stage runs as long as it needs, and the overrun is recorded against the original figure.
 
-**Slip reasons** are recorded in three categories: learning time, genuine stage difficulty, and machine time. Machine time covers long refreshes, downloads and conversions. It belongs to neither of the other two and would corrupt the learning rate if folded into it.
+**What each column measures.** Restructured 18 September 2026, see PR6.
+
+- **Nauman** and **Claude**: the two estimates, in business days, on a Monday to Friday week. Business days because that is the unit quoted to clients.
+- **Planned finish**: derived from the estimate at intake, and frozen.
+- **Actual finish**: the date the stage actually closed. The gap between this and the planned finish is delivery accuracy, which is what a client experiences.
+- **Days worked**: a count of the days on which work actually happened, weekend days included. Set against the estimate, this is effort accuracy, which is what says whether Nauman can estimate.
+- **Slip reason**: explains the days worked column only.
+
+The two accuracies are independent and carry opposite lessons, which is why they are separate columns. A stage can use exactly the estimated days of work and still finish late because a day was not worked. Recording only the late finish says the estimate was wrong, which would be the wrong correction to make. Recording only the days worked hides a real delay.
+
+**Slip reasons** are recorded in three categories, and they explain days worked only: learning time, genuine stage difficulty, and machine time. Machine time covers long refreshes, downloads and conversions. It belongs to neither of the other two and would corrupt the learning rate if folded into it.
+
+**A day not worked is not a slip reason.** It never enters the three categories. It appears as the gap between planned finish and actual finish, and nowhere else.
 
 ---
 
