@@ -62,9 +62,9 @@ Provisional at intake. Each locks at the stage named.
 
 **Reconciliation.** Three parts, because the published figures do not all carry the same precision. The Facts page rounds every figure above one million.
 
-- Record counts match the datastore API capture exactly, per program year and record type.
-- Dollar totals match the published CMS figures at the precision published.
-- Full precision dollar totals match the sum of the raw files. This is the part that proves nothing was lost in transformation.
+- Record counts match the datastore API capture exactly, per program year and record type. Scripted. The datastore query endpoint returns an exact count without paging.
+- Dollar totals match the published CMS figures at the precision published. **Documented check, not scripted.** Amended 16 September 2026, see D1.3. The Facts page is client side rendered and CMS documents no aggregate or SQL endpoint, so capturing this figure automatically would require reverse engineering an undocumented endpoint or driving a headless browser. Captured by hand on the download date, recorded in the baseline, and stated in the technical notes as a manual audit rather than a repeatable step.
+- Full precision dollar totals match the sum of the raw files. Scripted, and split in two: the CSV summed against the Parquet written from it, which is what proves the conversion lost nothing, and the coverage of that sum reported alongside it so a total computed over an incomplete set of rows cannot pass unnoticed.
 
 Locks at stage 2.
 
@@ -247,6 +247,8 @@ Claude's estimate would put delivery at Thursday 22 October.
 - Refresh model: import.
 - Transformation boundary: thin Python. Python does acquisition and Parquet conversion only. All cleaning and shaping lives in Power Query. Moves to balanced if the measured cost at stage 2 proves too high.
 - Python environment: uv, inside the repo, so the acquisition script's dependencies are declared where a third party can install them.
+- Conversion engine: DuckDB. Decided 16 September 2026, see D1.1. Polars and pandas both rejected.
+- Type policy: every column written as text. One payment column cast to `DECIMAL` at verification time, cast failures and coverage counted. Column headers pinned per file and compared rather than assumed. Decided 16 September 2026, see D1.2.
 - Profiling: Python over Parquet, not by loading eighty million rows into Power BI to find out what to load.
 - Tools to be introduced: DAX Studio and VertiPaq Analyzer at stage 2.
 - Source: openpaymentsdata.cms.gov, licensed as a US government work, terms checked.
