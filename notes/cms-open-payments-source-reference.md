@@ -40,6 +40,18 @@ Indexed query keys: covered recipient profile ID, NPI, record ID, teaching hospi
 
 The download endpoint takes the same conditions and column selection server side, which is the cheap way to pull a filtered extract without moving the whole file.
 
+## Vocabulary, and one word that traps
+
+The site runs on DKAN, which implements the DCAT vocabulary used by most government data catalogues. Three terms matter and one of them collides with everyday statistical usage.
+
+**Dataset.** The abstract thing being published, for example "2021 General Payments". Carries a title, description, publisher, licence, temporal coverage and a modified date.
+
+**Distribution.** One concrete downloadable form of a dataset. The same dataset offered as CSV and as JSON is one dataset with two distributions. A distribution holds a download URL, a media type, a format, usually a title, and in DKAN an identifier tying it to the datastore resource.
+
+**Nothing in the metastore is computed from the rows.** It is a catalogue. Any statistical property of the data, including an actual distribution in the statistical sense, is produced by profiling the files, never read from the API.
+
+The trap: "how many distributions does this dataset have" is a question about how many files are offered for download, not about the shape of any variable.
+
 ## Scale, program year 2025
 
 | File | Rows | Columns |
